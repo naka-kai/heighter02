@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function () {
 
   //スクロールヒント
   new ScrollHint('.js-scrollable', {

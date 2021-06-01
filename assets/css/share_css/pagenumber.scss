@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+
+@import '../share_css/style.scss';
+
+.pageNumber {
+  width: 100%;
+  margin-top: 10.6rem;
+  margin-bottom: 4.5rem;
+}
+
+.pageNumber_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.pageNumber_current {}
+
+.pageNumber_navyBlue {
+
+  p {
+    background-color: $navyBlue;
+    height: 5rem;
+    width: 5rem;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.9rem;
+  }
+}
+
+.pageNumber_white {
+  p {
+    border: 1px solid $navyBlue;
+    height: 4.8rem;
+    width: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.9rem;
+  }
+}
+
+.pageNumber_last {
+
+  p {
+    margin-right: 0;
+  }
+}

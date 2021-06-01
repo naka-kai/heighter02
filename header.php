@@ -7,21 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex" />
   <title>Engress</title>
-  <!-- css -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/share_css/reset.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/share_css/style.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/share_css/header.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/share_css/hero.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/home_css/about.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/home_css/feature.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/home_css/price.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/home_css/example.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/home_css/flow.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/home_css/faq.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/home_css/blog.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/home_css/news.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/share_css/contact.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/share_css/footer.css">
   <!-- favicon -->
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
   <?php wp_head(); ?>

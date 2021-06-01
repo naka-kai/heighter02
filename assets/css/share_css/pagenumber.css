@@ -181,6 +181,11 @@ body {
   font-family: "游ゴシック体", "游ゴシック", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
+.is-fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
 h1 {
   font-size: 4rem;
   font-weight: bold;
@@ -314,57 +319,55 @@ ul {
   }
 }
 
-.price_img-box {
-  background-image: url(../../img/price.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.pageNumber {
   width: 100%;
-  height: auto;
-  text-align: center;
-  margin: 3rem 0 3rem;
-  padding: 3rem 0;
+  margin-top: 10.6rem;
+  margin-bottom: 4.5rem;
 }
 
-@media screen and (min-width: 1280px) {
-  .price_img-box {
-    padding: 6rem 0 5.3rem;
-    margin: 4.3rem 0 4rem;
-  }
+.pageNumber_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.price_img-box-title {
+.pageNumber_navyBlue p {
+  background-color: #1B224C;
+  height: 5rem;
+  width: 5rem;
   color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1.9rem;
 }
 
-.price_img-box-link {
-  margin-top: 2rem;
+.pageNumber_white p {
+  border: 1px solid #1B224C;
+  height: 4.8rem;
+  width: 4.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1.9rem;
 }
 
-@media screen and (min-width: 1280px) {
-  .price_img-box-link {
-    margin-top: 2.7rem;
-  }
+.pageNumber_last p {
+  margin-right: 0;
 }
-
-.price_img-box-text {
-  font-weight: bold;
-}
-
-.price_img-box-text a {
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  padding: 1rem 2rem;
-  border-radius: 3rem;
-  line-height: 1.7;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-@media screen and (min-width: 1280px) {
-  .price_img-box-text a {
-    font-size: 1.6rem;
-    padding: 1.5rem 4.5rem;
-  }
-}
-/*# sourceMappingURL=fee.css.map */
+/*# sourceMappingURL=pagenumber.css.map */
