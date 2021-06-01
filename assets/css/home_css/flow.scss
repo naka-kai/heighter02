@@ -7,9 +7,14 @@
   padding-top: vh(425, 58);
 }
 
+.flow_title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
 .flow_list-item {
   margin-top: .8rem;
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
   background-color: $moreThinGray;
   display: flex;
   flex-direction: column;
