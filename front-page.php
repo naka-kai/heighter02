@@ -100,18 +100,18 @@
           $my_query->the_post();
       ?>
           <div class="example_card-list">
-              <p class="example_card-item-title"><?php the_field('title'); ?></p>
-              <figure class="example_card-item-img">
-                <?php if (get_field('image')) : ?>
-                  <img src="<?php the_field('image'); ?>" />
-                <?php endif; ?>
-              </figure>
-              <div class="example_card-item-text-top">
-                <p class="example_card-item-profession">会社員</p>
-                <p class="example_card-item-name">T.Fujiyamaさん</p>
-              </div>
-              <!-- example_card-item-text-top -->
-              <p class="example_card-item-period">3ヶ月でTOEFL80→108点</p>
+            <p class="example_card-item-title"><?php the_field('title'); ?></p>
+            <figure class="example_card-item-img">
+              <?php if (get_field('image')) : ?>
+                <img src="<?php the_field('image'); ?>">
+              <?php endif; ?>
+            </figure>
+            <div class="example_card-item-text-top">
+              <p class="example_card-item-profession">会社員</p>
+              <p class="example_card-item-name">T.Fujiyamaさん</p>
+            </div>
+            <!-- example_card-item-text-top -->
+            <p class="example_card-item-period">3ヶ月でTOEFL80→108点</p>
           </div>
           <!-- example_card-list -->
 
@@ -208,25 +208,34 @@
         $args = array(
           'posts_per_page' => 2,
           'post_status' => 'publish',
-          'post_type' => 'post'
+          'post_type' => 'post',
+          'order' => 'DESC'
         );
         $the_query = new WP_Query($args);
         ?>
         <?php if ($the_query->have_posts()) : ?>
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-            <a href="">
-              <article class="blog_article">
-                <figure class="blog_article-img-box"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample01.svg" alt="">
-                  <small class="blog_category">カテゴリー</small>
-                </figure>
+
+            <article class="blog_article">
+              <figure class="blog_article-img-box">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail('thumbnail'); ?>
+                <?php else : ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample01.jpg" alt="">
+                <?php endif; ?>
+                <div class="blog_category"><?php the_category(); ?></div>
+              </figure>
+              <a href="">
                 <div class="blog_article-text-box">
-                  <p class="blog_article-title .text"><?php the_title(); ?></p><small class="blog_article-date">2020-12-27</small>
+                  <div class="blog_article-title"><?php the_title(); ?></div>
+                  <small class="blog_article-date">2020-12-27</small>
                 </div>
-              </article>
-            </a>
+              </a>
+            </article>
+
           <?php endwhile; ?>
-          <?php wp_reset_postdata(); ?>
         <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
 
       </div>
     </section>

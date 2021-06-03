@@ -324,30 +324,16 @@ ul {
   background-color: #F8F8F8;
   position: relative;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .breadcrumb-list {
   padding: 2.5rem 0;
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
-.breadcrumb-item {
-  display: inline;
-}
-
-.breadcrumb-item::after {
-  /* >を表示*/
-  content: '>';
-  padding: 0 0.2em;
-}
-
-.breadcrumb-item a {
+.breadcrumb-list a {
   color: #1B224C;
-  border-bottom: 1px solid #1B224C;
-}
-
-.breadcrumb-item:last-child::after {
-  content: '';
 }
 /*# sourceMappingURL=breadcrumb.css.map */

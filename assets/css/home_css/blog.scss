@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// @import '../share_css/style.scss';
+@import '../share_css/style.scss';
 
 .blog-news {
   padding: vh(670, 90) 0 vh(670, 119);
@@ -23,6 +23,7 @@
 .blog_article {
   display: flex;
   padding-top: vh(670, 30);
+  overflow: hidden;
 }
 
 .blog_article-img-box {
@@ -53,6 +54,10 @@
   border: 1px solid #707070;
   font-size: 1.2rem;
   padding: .4rem .7rem;
+
+  a {
+    color: $white;
+  }
 }
 
 .blog_article-text-box {
@@ -64,4 +69,9 @@
 .blog_article-title {
   flex-grow: 1;
   font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

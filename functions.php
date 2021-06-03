@@ -49,7 +49,7 @@ function add_css_js()
   endif;
 
   //index.php
-  if (is_singular('post')) :
+  if (is_single('post')) :
     //blog_main.css
     wp_enqueue_style('blog_maincss', get_template_directory_uri() . '/assets/css/blog_css/blog_main.css');
     //blog_mainvisual.css
@@ -59,7 +59,7 @@ function add_css_js()
   endif;
 
   //single-post.php
-  if (is_single('post')) :
+  if (is_singular('post')) :
     //blog_detail_contact.css
     wp_enqueue_style('blog_detail_contact', get_template_directory_uri() . '/assets/css/blog_detail_css/blog_detail_contact.css');
     //blog_detail_main.css
@@ -115,3 +115,57 @@ add_action('wp_enqueue_scripts', 'add_css_js');
 //アイキャッチ画像を有効化
 add_theme_support('post-thumbnails');
 
+//ページネーション
+/**
+* ページネーション出力関数
+* $paged : 現在のページ
+* $pages : 全ページ数
+* $range : 左右に何ページ表示するか
+* $show_only : 1ページしかない時に表示するかどうか
+*/
+function pagination( $pages, $paged, $range = 2, $show_only = false ) {
+
+    $pages = ( int ) $pages;    //float型で渡ってくるので明示的に int型 へ
+    $paged = $paged ?: 1;       //get_query_var('paged')をそのまま投げても大丈夫なように
+
+    //表示テキスト
+    $text_first   = 1;
+    $text_last    = $pages;
+
+    if ( $show_only && $pages === 1 ) {
+        // １ページのみで表示設定が true の時
+        echo '<div class="pagination"><span class="current pager">1</span></div>';
+        return;
+    }
+
+    if ( $pages === 1 ) return;    // １ページのみで表示設定もない場合
+
+    if ( 1 !== $pages ) {
+        //２ページ以上の時
+        if ( $paged > $range + 1 ) {
+            // 「最初へ」 の表示
+            echo '<a href="', get_pagenum_link(1) ,'" class="first">', $text_first ,'</a>';
+        }
+        for ( $i = 1; $i <= $pages; $i++ ) {
+
+            if ( $i <= $paged + $range && $i >= $paged - $range ) {
+                // $paged +- $range 以内であればページ番号を出力
+                if ( $paged === $i ) {
+                    echo '<span class="current pager">', $i ,'</span>';
+                } else {
+                    echo '<a href="', get_pagenum_link( $i ) ,'" class="pager">', $i ,'</a>';
+                }
+            }
+        }
+        if ( $paged + $range < $pages ) {
+            // 「最後へ」 の表示
+            echo '<a href="', get_pagenum_link( $pages ) ,'" class="last">', $text_last ,'</a>';
+        }
+        echo '</div>';
+
+        if($pages >= 5) {
+          $pagedwnext = $paged + 2;
+          $pagedwnext = '…';
+        }
+    }
+  }

@@ -19,7 +19,7 @@
 .blog_main_article {
   display: block;
   padding-top: 3rem;
-
+  overflow: hidden;
 
   @include ipad {
     display: flex;
@@ -43,16 +43,11 @@
   top: 0;
   left: 0;
 
-  li {
-    a {
-      line-height: 2.4;
-      padding: .2rem 1.3rem;
-      color: $white;
-      background-color: $navyBlue;
-      display: block;
-    }
-  }
-
+  line-height: 2.4;
+  padding: .2rem 1.3rem;
+  color: $white;
+  background-color: $navyBlue;
+  display: block;
 }
 
 .blog_main_article-text-box {
@@ -67,6 +62,11 @@
   line-height: 1.8;
   margin-top: 1rem;
   font-size: 1.6rem;
+  color: $navyBlue;
+
+  a {
+    color: $navyBlue;
+  }
 
   @include ipad {
     margin-top: 0;
@@ -83,14 +83,17 @@
 .blog_main_article-text {
   line-height: 1.5;
   font-size: 1.6rem;
+  color: $navyBlue;
   // margin-top: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.text {
-  p {
+.hide {
+  display: none;
+}
 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+.more {
+  display: none; //「もっと見る」消えない
 }

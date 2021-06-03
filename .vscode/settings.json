@@ -1,5 +1,14 @@
 {
   "cSpell.words": [
     "Engress"
+  ],
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.formats": [
+  
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null
+    }
   ]
 }

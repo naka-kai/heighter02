@@ -8,18 +8,7 @@
 <section class="blog_main">
   <div class="container blog_main_container">
     <div class="articles">
-      <?php if (!get_the_category()) : ?>
         <h3 class="blog_main_title">記事一覧</h3>
-      <?php else : ?>
-        <h3 class="blog_main_title">
-          <?php
-          $categories = get_the_category();
-          if ($categories) :
-            echo $categories[0]->name;
-          endif;
-          ?>
-          一覧</h3>
-      <?php endif; ?>
 
       <?php
       $categories = get_the_category();
@@ -39,7 +28,7 @@
               <?php else : ?>
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/sample01.jpg'; ?>" alt="">
               <?php endif; ?>
-              <a href=" <?php the_permalink(); ?>">
+              <a href="<?php the_permalink(); ?>">
                 <div class="blog_main_category">
                   <?php
                   $categories = get_the_category();
