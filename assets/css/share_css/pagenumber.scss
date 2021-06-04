@@ -2,35 +2,14 @@
 
 @import '../share_css/style.scss';
 
-.pageNumber {
-  width: 100%;
+.pagiNation {
   margin-top: 10.6rem;
   margin-bottom: 4.5rem;
-}
-
-.pageNumber_wrapper {
   display: flex;
   justify-content: center;
-}
 
-.pageNumber_current {}
-
-.pageNumber_navyBlue {
-
-  p {
-    background-color: $navyBlue;
-    height: 5rem;
-    width: 5rem;
-    color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1.9rem;
-  }
-}
-
-.pageNumber_white {
-  p {
+  a,
+  span {
     border: 1px solid $navyBlue;
     height: 4.8rem;
     width: 4.8rem;
@@ -38,12 +17,20 @@
     justify-content: center;
     align-items: center;
     margin-right: 1.9rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.7;
+    color: $navyBlue;
   }
-}
 
-.pageNumber_last {
+  .current {
+    background-color: $navyBlue;
+    height: 5rem;
+    width: 5rem;
+    color: $white;
+  }
 
-  p {
+  .last {
     margin-right: 0;
   }
 }

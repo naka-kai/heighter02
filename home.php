@@ -8,7 +8,7 @@
 <section class="blog_main">
   <div class="container blog_main_container">
     <div class="articles">
-      <h3 class="blog_main_title"><?php single_cat_title(); ?>一覧</h3>
+      <h3 class="blog_main_title">記事一覧</h3>
 
       <?php
       if (have_posts()) :
@@ -27,7 +27,6 @@
               <a href="<?php echo get_category_link($categories[0]->term_id); ?>">
                 <div class="blog_main_category">
                   <?php
-                  $categories = get_the_category();
                   if ($categories) {
                     echo $categories[0]->name;
                   }
@@ -38,24 +37,25 @@
               <div class="blog_main_article-text-box">
                 <time class="blog_main_article-date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
                 <h4 class="blog_main_article-title"><?php echo mb_strimwidth(strip_tags(get_the_title()), 0, 50, '…', 'UTF-8'); ?></h4>
-                <div class="blog_main_article-text "><?php the_excerpt(); ?></div>
-              </div>
+                <p class="blog_main_article-text "><?php echo mb_strimwidth(strip_tags(get_the_excerpt()), 0, 100, '…', 'UTF-8'); ?>
+                </p>
             </a>
           </article>
-      <?php
+        <?php
         endwhile;
+        ?>
+
+        <div class="pagiNation">
+        <?php if (function_exists('pagination')) :
+          pagination($wp_query->max_num_pages, get_query_var('paged'));
+        endif;
       endif;
-      ?>
+        ?>
+        </div>
+
     </div>
   </div>
 </section>
-
-<div class="pagiNation">
-  <?php if (function_exists('pagination')) :
-    pagination($wp_query->max_num_pages, get_query_var('paged'));
-  endif;
-  ?>
-</div>
 
 <section class="contact">
   <div class="contact_bg-img">

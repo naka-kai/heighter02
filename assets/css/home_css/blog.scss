@@ -23,7 +23,6 @@
 .blog_article {
   display: flex;
   padding-top: vh(670, 30);
-  overflow: hidden;
 }
 
 .blog_article-img-box {
@@ -71,7 +70,4 @@
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 1.7;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }

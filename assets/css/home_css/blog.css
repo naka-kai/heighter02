@@ -338,7 +338,6 @@ ul {
 .blog_article {
   display: flex;
   padding-top: 4.47761vh;
-  overflow: hidden;
 }
 
 .blog_article-img-box {
@@ -388,8 +387,5 @@ ul {
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 1.7;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 /*# sourceMappingURL=blog.css.map */

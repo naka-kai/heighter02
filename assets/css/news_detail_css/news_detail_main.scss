@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-// @import '../share_css/style.scss';
+@import '../share_css/style.scss';
 
 
 .news_article-title {
@@ -16,126 +16,119 @@
 }
 
 .news_article-date {
+  font-size: 1.6rem;
   margin-top: 1.7rem;
+  display: block;
   text-align: right;
+  color: $navyBlue;
 
   @include ipad {
     margin-top: 3.5rem;
   }
 }
 
-.news_article-main-title {
-  margin-top: 3rem;
-  font-size: 2rem;
-
-  @include ipad {
-    margin-top: 6rem;
-  }
-}
-
-.news_article-main-text {
-  line-height: 1.5;
-  margin-top: 3rem;
-}
-
-.news_article-sub-title {
-  border-left: 4px solid $navyBlue;
-  padding-left: 1.2rem;
-  margin-top: 5rem;
-  font-weight: bold;
-  line-height: 1.5;
-}
-
-.news_article-sub-text {
-  line-height: 1.5;
-  margin-top: 3rem;
-}
-
-.news_article-quote {
-  margin-top: 2rem;
-  display: flex;
-  background-color: $moreThinGray;
-  padding: 1rem 0 2rem;
-
-  @include ipad {
+.news_detail_main-article {
+  h1 {
+    font-size: 2.6rem;
+    line-height: 1.5;
     margin-top: 3rem;
-    padding: 2.7rem 0 4rem;
-  }
+    font-size: 2rem;
 
-  @include spc {
-    margin-top: 5rem;
-  }
-
-  &::before {
-    content: '';
-    background-image: url(../../img/quote.svg);
-    width: 2rem;
-    height: 2rem;
-    background-size: cover;
-    display: inline-block;
-    background-repeat: no-repeat;
-    margin-left: 1rem;
-
-    @include spc {
-      width: 4.5rem;
-      height: 4.5rem;
-      margin-top: -.7rem;
-      margin-left: 2rem;
+    @include ipad {
+      margin-top: 6rem;
     }
   }
-}
 
-.news_article-quote-text-box {
-  width: 90%;
-}
-
-.news_article-quote-text {
-  line-height: 1.5;
-}
-
-.news_article-sub-img {
-  margin-top: 3rem;
-
-  img {
-    max-width: 100%;
+  p {
+    line-height: 1.5;
+    margin-top: 3rem;
   }
-}
 
-.news_article-list-wrapper {
-  margin-top: 3.5rem;
-}
-
-.news_article-list {
-  position: relative;
-  padding-left: 3.5rem;
-
-  &::before {
-    content: '';
-    width: 1.1rem;
-    height: 1.1rem;
-    border-radius: 50%;
-    display: block;
-    background-color: $yellowOrange;
-    position: absolute;
-    top: .6rem;
-    left: 0;
+  h2 {
+    border-left: 4px solid $navyBlue;
+    padding-left: 1.2rem;
+    margin-top: 5rem;
+    font-weight: bold;
+    line-height: 1.5;
   }
-}
 
-.news_article-list-text {
-  line-height: 1.5;
-}
+  blockquote {
+    margin-top: 2rem;
+    display: flex;
+    background-color: $moreThinGray;
+    padding: 1rem 0 2rem;
 
-.news_article-link {
-  margin: 3.5rem 0 6rem;
+    @include ipad {
+      margin-top: 3rem;
+      padding: 2.7rem 0 4rem;
+    }
 
-  @include ipad {
-    margin: 6.5rem 0;
+    @include spc {
+      margin-top: 5rem;
+    }
+
+    &::before {
+      content: '';
+      background-image: url(../../img/quote.svg);
+      width: 2rem;
+      height: 2rem;
+      background-size: cover;
+      display: inline-block;
+      background-repeat: no-repeat;
+      margin-left: 1rem;
+
+      @include spc {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-left: 2rem;
+      }
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  figure {
+    margin-top: 3rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  ul {
+    margin-top: 3.5rem;
+  }
+
+  li {
+    position: relative;
+    padding-left: 3.5rem;
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 50%;
+      display: block;
+      background-color: $yellowOrange;
+      position: absolute;
+      top: .6rem;
+      left: 0;
+    }
   }
 
   a {
+    margin: 3.5rem 0 6rem;
     text-decoration: underline;
     color: $yellowOrange;
     line-height: 1.5;
+
+    @include ipad {
+      margin: 6.5rem 0;
+    }
   }
 }

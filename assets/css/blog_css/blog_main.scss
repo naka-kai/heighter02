@@ -19,7 +19,6 @@
 .blog_main_article {
   display: block;
   padding-top: 3rem;
-  overflow: hidden;
 
   @include ipad {
     display: flex;
@@ -85,15 +84,8 @@
   font-size: 1.6rem;
   color: $navyBlue;
   // margin-top: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.hide {
+.omit, .more {
   display: none;
-}
-
-.more {
-  display: none; //「もっと見る」消えない
 }

@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-// @import '../share_css/style.scss';
+@import '../share_css/style.scss';
 
 
 .news_title {
@@ -31,6 +31,8 @@
   line-height: 1.9;
   white-space: nowrap;
   margin-right: 2rem;
+  font-size: 1.6rem;
+  font-weight: 200;
 
   @include spc {
     margin-right: 5rem;

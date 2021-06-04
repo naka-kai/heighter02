@@ -225,9 +225,9 @@
                 <?php endif; ?>
                 <div class="blog_category"><?php the_category(); ?></div>
               </figure>
-              <a href="">
+              <a href="<?php the_permalink(); ?>">
                 <div class="blog_article-text-box">
-                  <div class="blog_article-title"><?php the_title(); ?></div>
+                  <div class="blog_article-title"><?php echo mb_strimwidth(strip_tags(get_the_title()), 0, 50, '…', 'UTF-8'); ?></div>
                   <small class="blog_article-date">2020-12-27</small>
                 </div>
               </a>
@@ -241,21 +241,26 @@
     </section>
     <section class="news">
       <h3 class="news_title">お知らせ</h3>
-      <div class="news_articles">
-        <article class="news_article"><small class="news_article-date">2020-12-01</small>
-          <p class="news_article-title">2021年のスケジュールについて</p>
-        </article>
-      </div>
-      <div class="news_articles">
-        <article class="news_article"><small class="news_article-date">2019-11-02</small>
-          <p class="news_article-title">11月休校日のお知らせ</p>
-        </article>
-      </div>
-      <div class="news_articles">
-        <article class="news_article"><small class="news_article-date">2020-10-01</small>
-          <p class="news_article-title">10月休校日のお知らせ</p>
-        </article>
-      </div>
+
+      <?php
+      $news_posts = get_posts('post_type=news&posts_per_page=3');
+      if (!empty($news_posts)) :
+        foreach ($news_posts as $post) :
+          setup_postdata($post);
+      ?>
+          <article class="news_article">
+            <time class="news_article-date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
+            <a href="<?php the_permalink(); ?>">
+              <p class="news_article-title"><?php echo mb_strimwidth(strip_tags(get_the_title()), 0, 70, '…', 'UTF-8'); ?></p>
+            </a>
+          </article>
+      <?php
+        endforeach;
+        wp_reset_postdata();
+      endif;
+      ?>
+
+
     </section>
   </div>
 </div>

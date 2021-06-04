@@ -48,8 +48,8 @@ function add_css_js()
     wp_enqueue_style('aboutcss', get_template_directory_uri() . '/assets/css/price_css/price_main.css');
   endif;
 
-  //index.php
-  if (is_single('post')) :
+  //home.php, category.php
+  if (is_home() || is_category()) :
     //blog_main.css
     wp_enqueue_style('blog_maincss', get_template_directory_uri() . '/assets/css/blog_css/blog_main.css');
     //blog_mainvisual.css
@@ -72,6 +72,8 @@ function add_css_js()
     wp_enqueue_style('blog_maincss', get_template_directory_uri() . '/assets/css/news_css/news_main.css');
     //news_mainvisual.css
     wp_enqueue_style('news_mainvisualcss', get_template_directory_uri() . '/assets/css/news_css/news_mainvisual.css');
+    //pagenumber.css
+    wp_enqueue_style('pagenumber', get_template_directory_uri() . '/assets/css/share_css/pagenumber.css');
   endif;
 
   //single-news.php
@@ -117,55 +119,86 @@ add_theme_support('post-thumbnails');
 
 //ページネーション
 /**
-* ページネーション出力関数
-* $paged : 現在のページ
-* $pages : 全ページ数
-* $range : 左右に何ページ表示するか
-* $show_only : 1ページしかない時に表示するかどうか
-*/
-function pagination( $pages, $paged, $range = 2, $show_only = false ) {
+ * ページネーション出力関数
+ * $paged : 現在のページ
+ * $pages : 全ページ数
+ * $range : 左右に何ページ表示するか
+ * $show_only : 1ページしかない時に表示するかどうか
+ */
+function pagination($pages, $paged, $range = 1, $show_only = false)
+{
 
-    $pages = ( int ) $pages;    //float型で渡ってくるので明示的に int型 へ
-    $paged = $paged ?: 1;       //get_query_var('paged')をそのまま投げても大丈夫なように
+  $pages = (int) $pages;    //float型で渡ってくるので明示的に int型 へ
+  $paged = $paged ?: 1;       //get_query_var('paged')をそのまま投げても大丈夫なように
 
-    //表示テキスト
-    $text_first   = 1;
-    $text_last    = $pages;
+  //表示テキスト
+  $text_first   = 1;
+  $text_last    = $pages;
 
-    if ( $show_only && $pages === 1 ) {
-        // １ページのみで表示設定が true の時
-        echo '<div class="pagination"><span class="current pager">1</span></div>';
-        return;
-    }
-
-    if ( $pages === 1 ) return;    // １ページのみで表示設定もない場合
-
-    if ( 1 !== $pages ) {
-        //２ページ以上の時
-        if ( $paged > $range + 1 ) {
-            // 「最初へ」 の表示
-            echo '<a href="', get_pagenum_link(1) ,'" class="first">', $text_first ,'</a>';
-        }
-        for ( $i = 1; $i <= $pages; $i++ ) {
-
-            if ( $i <= $paged + $range && $i >= $paged - $range ) {
-                // $paged +- $range 以内であればページ番号を出力
-                if ( $paged === $i ) {
-                    echo '<span class="current pager">', $i ,'</span>';
-                } else {
-                    echo '<a href="', get_pagenum_link( $i ) ,'" class="pager">', $i ,'</a>';
-                }
-            }
-        }
-        if ( $paged + $range < $pages ) {
-            // 「最後へ」 の表示
-            echo '<a href="', get_pagenum_link( $pages ) ,'" class="last">', $text_last ,'</a>';
-        }
-        echo '</div>';
-
-        if($pages >= 5) {
-          $pagedwnext = $paged + 2;
-          $pagedwnext = '…';
-        }
-    }
+  if ($show_only && $pages === 1) {
+    // １ページのみで表示設定が true の時
+    echo '<div class="pagination"><span class="current pager">1</span></div>';
+    return;
   }
+
+  if ($pages === 1) return;    // １ページのみで表示設定もない場合
+
+  if (1 !== $pages) {
+    //２ページ以上の時
+    if ($paged > $range + 1) {
+      // 「最初へ」 の表示
+      echo '<a href="', get_pagenum_link(1), '" class="first">', $text_first, '</a>';
+    }
+    if ($paged === $pages || $paged === $text_first) {
+      $range = 2;
+    }
+    if ($pages >= 5) {
+      if ($paged === $text_first || $paged === $text_first + 1) {
+        $pagedwprev = '';
+        echo $pagedwprev;
+      } else {
+      $pagedwprev = $paged - 2;
+      $pagedwprev = '…';
+      echo '<span>'.$pagedwprev.'</span>';
+      }
+    }
+    for ($i = 1; $i <= $pages; $i++) {
+
+      if ($i <= $paged + $range && $i >= $paged - $range) {
+        // $paged +- $range 以内であればページ番号を出力
+        if ($paged === $i) {
+          echo '<span class="current pager">', $i, '</span>';
+        } else {
+          echo '<a href="', get_pagenum_link($i), '" class="pager">', $i, '</a>';
+        }
+      }
+    }
+    if ($pages >= 5) {
+      if ($paged === $pages || $paged === $pages - 1) {
+        $pagedwnext = '';
+        echo $pagedwnext;
+      } else {
+
+        $pagedwnext = $paged + 2;
+        $pagedwnext = '…';
+        echo '<span>' . $pagedwnext . '</span>';
+      }
+    }
+
+    if($pages)
+    if ($paged + $range < $pages) {
+      // 「最後へ」 の表示
+      echo '<a href="', get_pagenum_link($pages), '" class="last">', $text_last, '</a>';
+    }
+    echo '</div>';
+  }
+}
+
+//ウィジェットの有効化
+function my_theme_widgets_init() {
+  register_sidebar(array(
+    'name' => 'Main Sidebar',
+    'id' => 'main-sidebar',
+  ));
+}
+add_action('widgets_init', 'my_theme_widgets_init');

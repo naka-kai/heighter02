@@ -70,4 +70,8 @@ jQuery(function ($) {
     return false;
   });
 
+  //余計なクラスを削除
+  $('span').removeClass('hide');
+  // $('span').removeClass('omit');
+  // $('a').removeClass('more');
 });

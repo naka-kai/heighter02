@@ -337,7 +337,6 @@ ul {
 .blog_main_article {
   display: block;
   padding-top: 3rem;
-  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -399,16 +398,9 @@ ul {
   line-height: 1.5;
   font-size: 1.6rem;
   color: #1B224C;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.hide {
-  display: none;
-}
-
-.more {
+.omit, .more {
   display: none;
 }
 /*# sourceMappingURL=blog_main.css.map */

@@ -320,6 +320,7 @@ ul {
 }
 
 .contact {
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -329,15 +330,9 @@ ul {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 15rem;
 }
 
@@ -352,15 +347,9 @@ ul {
 }
 
 .contact_circle-request-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 4rem;
   width: 20rem;
   margin-top: 1rem;
@@ -388,15 +377,9 @@ ul {
 @media screen and (min-width: 1280px) {
   .contact_tel-contact-box {
     height: 8rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
 }
 
