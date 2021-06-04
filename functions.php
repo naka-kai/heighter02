@@ -109,7 +109,9 @@ function add_css_js()
   //page-price.php
   if (is_page('price')) :
     //scrollHint.css
+    wp_enqueue_style('scrollHintmincss','https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css');
     wp_enqueue_script('scrollHintjs', get_template_directory_uri() . '/assets/js/scrollHint.js');
+    wp_enqueue_script('scrollHintminjs', 'https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js');
   endif;
 }
 add_action('wp_enqueue_scripts', 'add_css_js');
