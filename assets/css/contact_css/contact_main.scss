@@ -1,13 +1,13 @@
 @charset 'utf-8';
 
-// @import '../share_css/style.scss';
+@import '../share_css/style.scss';
 
 .db {
   display: block;
 }
 
 .contact_main-container {
-  margin: 0 auto;
+  margin: 5.8rem auto 0;
 
   @include ipad {
     width: 75%;

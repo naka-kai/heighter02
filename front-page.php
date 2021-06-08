@@ -6,7 +6,7 @@
       <h5 class="hero_text-text">日本人へのTOEFL指導歴豊かな講師陣の<br class="smallNone">コーチング型TOEFLスクール</h5><a href="" class="p circle-request-btn-text">
         <div class="circle-request-btn">資料請求 </div>
       </a>
-      <p class="contact-link-text"><a href="">お問い合わせ</a></p>
+      <p class="contact-link-text"><a href="<?php echo home_url('/contact/') ?>">お問い合わせ</a></p>
     </div>
   </div>
 </section>
@@ -75,7 +75,7 @@
     <div class="price_img-box">
       <h4 class="price_img-box-title">Engressの料金プランはこちら</h4>
       <div class="price_img-box-link">
-        <p class="price_img-box-text"><a href="">料金を見てみる</a></p>
+        <p class="price_img-box-text"><a href="<?php echo home_url('/price/') ?>">料金を見てみる</a></p>
       </div>
     </div>
   </div>

@@ -324,7 +324,7 @@ ul {
 }
 
 .contact_main-container {
-  margin: 0 auto;
+  margin: 5.8rem auto 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -339,18 +339,6 @@ ul {
 
 .companyname-label {
   margin-top: 4rem;
-}
-
-input::-webkit-input-placeholder {
-  color: #B4B4B4;
-}
-
-input:-ms-input-placeholder {
-  color: #B4B4B4;
-}
-
-input::-ms-input-placeholder {
-  color: #B4B4B4;
 }
 
 input::placeholder {
@@ -428,8 +416,6 @@ input[type=radio] {
 
 .business-wrapper {
   margin-top: 1.9rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -439,8 +425,6 @@ input[type=radio] {
 
 .type-btn-wrapper {
   margin-top: 1.9rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -450,8 +434,6 @@ input[type=radio] {
 
 .document-btn-wrapper {
   margin-top: 1.9rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -461,8 +443,6 @@ input[type=radio] {
 
 .other-btn-wrapper {
   margin-top: 1.9rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -472,18 +452,6 @@ input[type=radio] {
 
 .content-text {
   margin-top: 2.4rem;
-}
-
-textarea::-webkit-input-placeholder {
-  color: #B4B4B4;
-}
-
-textarea:-ms-input-placeholder {
-  color: #B4B4B4;
-}
-
-textarea::-ms-input-placeholder {
-  color: #B4B4B4;
 }
 
 textarea::placeholder {
@@ -515,12 +483,8 @@ textarea::placeholder {
 .contact_form-privacy {
   text-align: center;
   margin-top: 3.1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .privacy-agree {
