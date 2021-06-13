@@ -422,6 +422,7 @@ ul {
 
 .news_detail_main-article figure img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 .news_detail_main-article ul {

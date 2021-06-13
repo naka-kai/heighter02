@@ -329,8 +329,8 @@ ul {
 .pagiNation a,
 .pagiNation span {
   border: 1px solid #1B224C;
-  height: 4.8rem;
-  width: 4.8rem;
+  height: 3.8rem;
+  width: 3.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,11 +341,26 @@ ul {
   color: #1B224C;
 }
 
+@media screen and (min-width: 768px) {
+  .pagiNation a,
+  .pagiNation span {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+}
+
 .pagiNation .current {
   background-color: #1B224C;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .pagiNation .current {
+    height: 5rem;
+    width: 5rem;
+  }
 }
 
 .pagiNation .last {

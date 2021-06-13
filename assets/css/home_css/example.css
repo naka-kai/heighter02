@@ -331,7 +331,7 @@ ul {
 
 @media screen and (min-width: 1280px) {
   .example_container {
-    max-width: 1600px;
+    max-width: 1000px;
   }
 }
 
@@ -347,12 +347,8 @@ ul {
 @media screen and (min-width: 1280px) {
   .example_card-box {
     margin-top: 13.7rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
 
@@ -383,12 +379,8 @@ ul {
 }
 
 .example_card-item-text-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 1.5rem;
 }
 

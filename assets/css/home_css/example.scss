@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// @import '../share_css/style.scss';
+@import '../share_css/style.scss';
 
 .example {
   background-color: $navyBlue;
@@ -12,7 +12,7 @@
   max-width: 50rem;
 
   @include spc {
-    max-width: 1600px;
+    max-width: 1000px;
   }
 }
 

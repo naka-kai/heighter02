@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// @import '../share_css/style.scss';
+@import '../share_css/style.scss';
 
 
 .flow {
@@ -13,7 +13,7 @@
 }
 
 .flow_list-item {
-  margin-top: .8rem;
+  margin-top: 1.5rem;
   // padding-bottom: 1rem;
   background-color: $moreThinGray;
   display: flex;
@@ -45,8 +45,7 @@
   line-height: 1.8;
   font-size: 1.6rem;
 
-  @include spc {
-  }
+  @include spc {}
 }
 
 .flow_list-item-text-box {

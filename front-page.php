@@ -86,7 +86,6 @@
   <div class="container example_container">
     <h2 class="example_title">TOEFL成功事例</h2>
     <div class="example_card-box">
-
       <?php
       $args = array(
         'posts_per_page' => 3,
@@ -114,11 +113,9 @@
             <p class="example_card-item-period">3ヶ月でTOEFL80→108点</p>
           </div>
           <!-- example_card-list -->
-
       <?php endwhile;
         wp_reset_postdata();
       endif; ?>
-
     </div>
     <!-- example_card-box -->
   </div>

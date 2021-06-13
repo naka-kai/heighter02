@@ -18,6 +18,21 @@
   margin-top: 6rem;
 }
 
+.notbr>br {
+  display: none;
+}
+
+.error {
+  font-size: 1.4rem !important;
+  margin-top: 1rem;
+}
+
+.contact_form-privacy .error {
+  margin-left: 1rem;
+  margin-top: 0;
+}
+
+
 .companyname-label {
   margin-top: 4rem;
 }
@@ -87,40 +102,28 @@ input[type=radio] {
   height: 2rem;
 }
 
-.business-wrapper {
-  margin-top: 1.9rem;
+.contact_form-type-radio-btn-wrapper {
+  margin-top: 1.2rem;
+}
+
+.mwform-radio-field:not(:nth-child(2)) {
+  margin-top: 1.9rem !important;
+}
+
+.mwform-radio-field label {
   display: flex;
+  align-items: center;
 }
 
-.business-btn {
-  margin-right: 1.9rem;
+.contact_form-type-radio-btn {
+  margin-right: 1.9rem !important;
 }
 
-.type-btn-wrapper {
-  margin-top: 1.9rem;
-  display: flex;
-}
-
-.type-btn {
-  margin-right: 1.9rem;
-}
-
-.document-btn-wrapper {
-  margin-top: 1.9rem;
-  display: flex;
-}
-
-.document-btn {
-  margin-right: 1.9rem;
-}
-
-.other-btn-wrapper {
-  margin-top: 1.9rem;
-  display: flex;
-}
-
-.other-btn {
-  margin-right: 1.9rem;
+.mwform-radio-field-text {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 200;
+  color: $navyBlue;
 }
 
 .content-text {
@@ -155,11 +158,30 @@ textarea::placeholder {
   text-align: center;
   margin-top: 3.1rem;
   display: flex;
-  justify-content: center
+  justify-content: center;
+  align-items: center;
 }
 
 .privacy-agree {
   display: inline;
+}
+
+.privacy-check {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.7rem !important;
+}
+
+.mwform-checkbox-field>label {
+  display: flex;
+  align-items: center;
+}
+
+.mwform-checkbox-field-text {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 200;
+  color: $navyBlue;
 }
 
 .submit-btn {
