@@ -175,6 +175,8 @@ select {
 html {
   font-size: 62.5%;
   /* -> 10px; */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 body {

@@ -52,10 +52,14 @@ $white: #FFFFFF;
 html {
   font-size: 62.5%;
   /* -> 10px; */
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "游ゴシック体", "游ゴシック", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  overflow-x: hidden;
 }
 
 .is-fixed {

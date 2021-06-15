@@ -175,6 +175,8 @@ select {
 html {
   font-size: 62.5%;
   /* -> 10px; */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -533,13 +535,14 @@ ul {
 
 @media screen and (min-width: 768px) {
   .blog_recommend-article-img {
-    width: 21rem;
-    height: 12.8rem;
+    width: auto;
+    height: auto;
   }
 }
 
 .blog_recommend-article-img img {
-  width: 100%;
+  width: 10rem;
+  height: 7rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -549,8 +552,8 @@ ul {
 
 @media screen and (min-width: 768px) {
   .blog_recommend-article-img img {
-    width: 21rem;
-    height: 12.8rem;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -627,7 +630,6 @@ ul {
 @media screen and (min-width: 768px) {
   .blog_sidebar {
     display: flex;
-    justify-content: space-between;
     margin-top: 3rem;
   }
 }
@@ -708,6 +710,7 @@ ul {
 @media screen and (min-width: 768px) {
   .menu {
     width: 48%;
+    margin-left: auto;
   }
 }
 

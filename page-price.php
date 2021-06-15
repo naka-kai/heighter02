@@ -11,7 +11,7 @@
       <h3 class="price_system-title">料金体系</h3>
       <div class="price_system-content">
         <div class="price_system-initiation price_system-box">
-          入会金 39,800円
+          入会金<br class="priceDone"> 39,800円
         </div>
         <div class="price_system-plus-box">
           <span class="price_system-plus"></span>

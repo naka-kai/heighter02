@@ -70,8 +70,29 @@ jQuery(function ($) {
     return false;
   });
 
+  var count = 10;
+  $('.blog_related-article-title').each(function () {
+    var thisText = $(this).text();
+    var textLength = thisText.length;
+    if (textLength > count) {
+      var showText = thisText.substring(0, count);
+      var hideText = thisText.substring(count, textLength);
+      var insertText = showText;
+      insertText += '<span class="omit">…</span>';
+      $(this).html(insertText);
+    };
+  });
+  $('.text_overflow .hide').hide();
+  $('.text_overflow .more').click(function () {
+    $(this).hide()
+      .prev('.omit').hide()
+      .prev('.hide').fadeIn();
+    return false;
+  });
+
   //余計なクラスを削除
   $('span').removeClass('hide');
+  $('a').removeClass('hide');
 
 
 });

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// @import '../share_css/style.scss';
+@import '../share_css/style.scss';
 
 .price_main {
   padding-bottom: 6.2rem;
@@ -35,6 +35,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.priceDone {
+  display: block;
+
+  @media screen and (min-width:520px) {
+    display: none;
+  }
 }
 
 .price_system-plus-box {
@@ -81,7 +89,7 @@
 
 .scroll-nav {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 .price_cards {
@@ -91,40 +99,23 @@
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
-  // margin-top: 3rem;
   margin-top: 13rem;
 
   :last-child {
     padding-right: 0;
   }
 
-  @include ipad {
-  }
+  @include ipad {}
 }
 
 .price_card {
   text-align: center;
-  // width: 100%;
-  // margin-top: 1rem;
   width: 23%;
 
-  // @include ipad {
-  //   width: 48%;
-  // }
-
-  // @include spc {
-  //   width: 23%;
-  //   margin-top: 0;
-  // }
 }
 
 .price_card-recommend {
   position: relative;
-  // margin-top: 5rem;
-
-  @include spc {
-    // margin-top: 0;
-  }
 }
 
 .price_card-title {

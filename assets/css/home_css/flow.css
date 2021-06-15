@@ -175,6 +175,8 @@ select {
 html {
   font-size: 62.5%;
   /* -> 10px; */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -330,6 +332,7 @@ ul {
 
 .flow_list-item {
   margin-top: 1.5rem;
+  padding-bottom: 1rem;
   background-color: #F8F8F8;
   display: flex;
   flex-direction: column;
@@ -337,7 +340,10 @@ ul {
 
 @media screen and (min-width: 1280px) {
   .flow_list-item {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+    height: 6.4rem;
   }
 }
 
@@ -351,12 +357,12 @@ ul {
 @media screen and (min-width: 1280px) {
   .flow_list-item-number-box {
     width: 6.4rem;
-    height: 6.4rem;
+    height: 100%;
   }
 }
 
 .flow_list-item-number {
-  height: 100%;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,8 +371,22 @@ ul {
   font-size: 1.6rem;
 }
 
+@media screen and (min-width: 1280px) {
+  .flow_list-item-number {
+    height: 100%;
+  }
+}
+
 .flow_list-item-text-box {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1280px) {
+  .flow_list-item-text-box {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .flow_list-item-title {

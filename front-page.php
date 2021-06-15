@@ -83,7 +83,7 @@
 </div>
 </section>
 <section class="example">
-  <div class="container example_container">
+  <div class="example_container">
     <h2 class="example_title">TOEFL成功事例</h2>
     <div class="example_card-box">
       <?php

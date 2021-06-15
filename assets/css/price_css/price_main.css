@@ -175,6 +175,8 @@ select {
 html {
   font-size: 62.5%;
   /* -> 10px; */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -338,12 +340,8 @@ ul {
 }
 
 .price_system-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 6rem;
 }
 
@@ -355,25 +353,25 @@ ul {
   font-size: 2.2rem;
   font-weight: bold;
   line-height: 1.6;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.priceDone {
+  display: block;
+}
+
+@media screen and (min-width: 520px) {
+  .priceDone {
+    display: none;
+  }
 }
 
 .price_system-plus-box {
   margin: 0 3.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .price_system-plus {
@@ -395,8 +393,7 @@ ul {
   width: 100%;
   height: 100%;
   background: inherit;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .price_system-text {
@@ -415,21 +412,16 @@ ul {
 
 .scroll-nav {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 .price_cards {
   max-width: 1280px;
   min-width: 770px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 13rem;
 }
 
@@ -449,15 +441,9 @@ ul {
 .price_card-title {
   background-color: #1B224C;
   color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 6rem;
   line-height: 2.2;
   font-weight: bold;
@@ -466,12 +452,8 @@ ul {
 .price_card-title-recommend1 {
   background-color: #F5A623;
   height: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   position: absolute;
   top: -4rem;
   width: 100%;
@@ -516,13 +498,8 @@ ul {
 
 .price_card-content-text-box {
   margin-top: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .price_card-content-text {
@@ -540,7 +517,6 @@ ul {
   height: 6px;
   border-left: 3px solid #1B224C;
   border-bottom: 3px solid #1B224C;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 /*# sourceMappingURL=price_main.css.map */
