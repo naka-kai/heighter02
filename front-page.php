@@ -224,7 +224,7 @@
               </figure>
               <a href="<?php the_permalink(); ?>">
                 <div class="blog_article-text-box">
-                  <div class="blog_article-title"><?php echo mb_strimwidth(strip_tags(get_the_title()), 0, 50, '…', 'UTF-8'); ?></div>
+                  <div class="blog_article-title"><?php echo mb_strimwidth(strip_tags(get_the_title()), 0, 40, '…', 'UTF-8'); ?></div>
                   <small class="blog_article-date">2020-12-27</small>
                 </div>
               </a>
