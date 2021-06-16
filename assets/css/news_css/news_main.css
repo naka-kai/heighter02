@@ -177,10 +177,12 @@ html {
   /* -> 10px; */
   max-width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "游ゴシック体", "游ゴシック", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  overflow-x: hidden;
 }
 
 .is-fixed {
@@ -332,21 +334,21 @@ ul {
   }
 }
 
-.news_first-article {
+.news_article {
+  display: flex;
+  border-bottom: 1px solid #D5D5D5;
+  padding: 2.3rem 0;
+}
+
+.news_article:first-of-type {
   border-top: 1px solid #D5D5D5;
   margin-top: 2.5rem;
 }
 
 @media screen and (min-width: 1280px) {
-  .news_first-article {
+  .news_article:first-of-type {
     margin-top: 5rem;
   }
-}
-
-.news_article {
-  display: flex;
-  border-bottom: 1px solid #D5D5D5;
-  padding: 2.3rem 0;
 }
 
 .news_article-date {
@@ -361,6 +363,10 @@ ul {
   .news_article-date {
     margin-right: 5rem;
   }
+}
+
+.news_article-title {
+  border-top: none;
 }
 
 .news_article-title a {

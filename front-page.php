@@ -3,8 +3,8 @@
   <div class="hero_bg-img">
     <div class="hero_text-box">
       <h1 class="hero_text-title">TOEFL対策は<br class="smallDone">Engress</h1>
-      <h5 class="hero_text-text">日本人へのTOEFL指導歴豊かな講師陣の<br class="smallNone">コーチング型TOEFLスクール</h5><a href="" class="p circle-request-btn-text">
-        <div class="circle-request-btn">資料請求 </div>
+      <h5 class="hero_text-text">日本人へのTOEFL指導歴豊かな講師陣の<br class="smallNone">コーチング型TOEFLスクール</h5><a href="<?php echo home_url('/contact/') ?>" class="p circle-request-btn-text">
+        <div class="circle-request-btn">資料請求</div>
       </a>
       <p class="contact-link-text"><a href="<?php echo home_url('/contact/') ?>">お問い合わせ</a></p>
     </div>
@@ -22,7 +22,7 @@
     </div>
     <div class="about_white-text-box-wrapper">
       <div class="about_white-text-box">
-        <h2 class="about_white-text-title">Engressは<br>TOEFLに特化したスクールです</h2>
+        <h2 class="about_white-text-title">Engressは<br><span class="about_white-text-title-border">TOEFLに特化したスクール</span>です</h2>
         <h5 class="about_white-text-text">完全オーダーメイドで、<br class="smallDone">１人１人の悩みに合わせた<br class="smallDone">最適な指導で<br class="smallNone">TOEFLの苦手分野を克服します。</h5>
       </div>
     </div>

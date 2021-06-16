@@ -14,7 +14,7 @@
       while (have_posts()) :
         the_post();
     ?>
-        <article class="news_article news_first-article">
+        <article class="news_article">
           <time class="news_article-date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
           <p class="news_article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         </article>

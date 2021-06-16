@@ -45,6 +45,7 @@ input::placeholder {
   width: calc(100% - 4.8rem);
   padding: 2.2rem;
   margin-top: 1.2rem;
+  box-sizing: border-box;
 
   @include ipad {
     width: 100%;
@@ -59,6 +60,7 @@ input::placeholder {
   width: calc(100% - 4.8rem);
   padding: 2.2rem;
   margin-top: 1.2rem;
+  box-sizing: border-box;
 
   @include ipad {
     width: 100%;
@@ -73,6 +75,7 @@ input::placeholder {
   width: calc(100% - 4.8rem);
   padding: 2.2rem;
   margin-top: 1.2rem;
+  box-sizing: border-box;
 
   @include ipad {
     width: 100%;
@@ -87,6 +90,7 @@ input::placeholder {
   width: calc(100% - 4.8rem);
   padding: 2.2rem;
   margin-top: 1.2rem;
+  box-sizing: border-box;
 
   @include ipad {
     width: 100%;
@@ -138,6 +142,7 @@ textarea::placeholder {
   width: calc(100% - 4.6rem);
   padding: 2.2rem;
   margin-top: 1.2rem;
+  box-sizing: border-box;
 
   @include ipad {
     width: 100%;

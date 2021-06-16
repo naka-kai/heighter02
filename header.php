@@ -32,7 +32,7 @@
             <li class="header-sp-menu-list">コース・料金</li>
           </a>
         </ul>
-        <div class="header_sp-btn-box"><a href="#">
+        <div class="header_sp-btn-box"><a href="<?php echo home_url('/contact/') ?>">
             <div class="square-request-btn header_sp-btn"><span class="square-request-btn-text">資料請求</span></div>
           </a>
           <a href="<?php echo home_url('/contact/') ?>">
@@ -56,7 +56,7 @@
         <div class="tel-box"><small class="tel-hour">平日08:00〜20:00</small>
           <p class="tel-number"><a href="tel:0123-456-7890" class="p">0123-456-7890</a></p>
         </div>
-        <a href="#">
+        <a href="<?php echo home_url('/contact/') ?>">
           <div class="square-request-btn header_pc-btn"><span class="square-request-btn-text">資料請求</span></div>
         </a>
         <a href="<?php echo home_url('/contact/') ?>">

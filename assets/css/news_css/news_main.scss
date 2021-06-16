@@ -2,22 +2,13 @@
 
 @import '../share_css/style.scss';
 
-
 .news_title {
   text-align: center;
   margin-top: 3rem;
 
+
   @include spc {
     margin-top: 6rem;
-  }
-}
-
-.news_first-article {
-  border-top: 1px solid $thinGray;
-  margin-top: 2.5rem;
-
-  @include spc {
-    margin-top: 5rem;
   }
 }
 
@@ -25,6 +16,15 @@
   display: flex;
   border-bottom: 1px solid $thinGray;
   padding: 2.3rem 0;
+
+  &:first-of-type {
+    border-top: 1px solid $thinGray;
+    margin-top: 2.5rem;
+
+    @include spc {
+      margin-top: 5rem;
+    }
+  }
 }
 
 .news_article-date {
@@ -40,11 +40,11 @@
 }
 
 .news_article-title {
+  border-top: none;
+
   a {
     line-height: 1.5;
     text-decoration: underline;
     color: $navyBlue;
   }
 }
-
-

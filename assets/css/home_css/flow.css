@@ -177,10 +177,12 @@ html {
   /* -> 10px; */
   max-width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "游ゴシック体", "游ゴシック", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  overflow-x: hidden;
 }
 
 .is-fixed {
@@ -369,6 +371,7 @@ ul {
   font-weight: bold;
   line-height: 1.8;
   font-size: 1.6rem;
+  color: #FFFFFF;
 }
 
 @media screen and (min-width: 1280px) {
